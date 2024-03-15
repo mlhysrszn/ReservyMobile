@@ -7,18 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F1A01432BA4F9FA008AB721 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A01422BA4F9FA008AB721 /* ViewExtensions.swift */; };
+		3F3979672BA2541E0095E2A1 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3979662BA2541E0095E2A1 /* LoginScreen.swift */; };
+		3F3979692BA254DD0095E2A1 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3979682BA254DD0095E2A1 /* Assets.swift */; };
+		3F39796C2BA2591D0095E2A1 /* FilledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F39796B2BA2591D0095E2A1 /* FilledButton.swift */; };
+		3F39796E2BA25A100095E2A1 /* PlainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F39796D2BA25A100095E2A1 /* PlainButton.swift */; };
 		3FC874312B8BD6AE00770A17 /* ReservyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC874302B8BD6AE00770A17 /* ReservyApp.swift */; };
 		3FC874332B8BD6AE00770A17 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC874322B8BD6AE00770A17 /* ContentView.swift */; };
 		3FC874352B8BD6AF00770A17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC874342B8BD6AF00770A17 /* Assets.xcassets */; };
 		3FC874382B8BD6AF00770A17 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC874372B8BD6AF00770A17 /* Preview Assets.xcassets */; };
+		3FC874402B8BDA8A00770A17 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8743F2B8BDA8A00770A17 /* Colors.swift */; };
+		3FC874442B8BDD2000770A17 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC874432B8BDD2000770A17 /* SplashScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F1A01422BA4F9FA008AB721 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		3F3979662BA2541E0095E2A1 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		3F3979682BA254DD0095E2A1 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		3F39796B2BA2591D0095E2A1 /* FilledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilledButton.swift; sourceTree = "<group>"; };
+		3F39796D2BA25A100095E2A1 /* PlainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainButton.swift; sourceTree = "<group>"; };
 		3FC8742D2B8BD6AE00770A17 /* Reservy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reservy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC874302B8BD6AE00770A17 /* ReservyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservyApp.swift; sourceTree = "<group>"; };
 		3FC874322B8BD6AE00770A17 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3FC874342B8BD6AF00770A17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FC874372B8BD6AF00770A17 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3FC8743F2B8BDA8A00770A17 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		3FC874432B8BDD2000770A17 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		3FC874452B8BE5BF00770A17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +47,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F1A013F2BA4F9D5008AB721 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3F1A01402BA4F9E3008AB721 /* Extensions */,
+				3FC8743E2B8BDA7800770A17 /* Constants */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		3F1A01402BA4F9E3008AB721 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3F1A01422BA4F9FA008AB721 /* ViewExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3F3979652BA253E30095E2A1 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				3F39796A2BA258F90095E2A1 /* Component */,
+				3FC874432B8BDD2000770A17 /* SplashScreen.swift */,
+				3F3979662BA2541E0095E2A1 /* LoginScreen.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		3F39796A2BA258F90095E2A1 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				3F39796B2BA2591D0095E2A1 /* FilledButton.swift */,
+				3F39796D2BA25A100095E2A1 /* PlainButton.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 		3FC874242B8BD6AE00770A17 = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +102,9 @@
 		3FC8742F2B8BD6AE00770A17 /* Reservy */ = {
 			isa = PBXGroup;
 			children = (
+				3F1A013F2BA4F9D5008AB721 /* Utils */,
+				3FC874452B8BE5BF00770A17 /* Info.plist */,
+				3F3979652BA253E30095E2A1 /* Presentation */,
 				3FC874302B8BD6AE00770A17 /* ReservyApp.swift */,
 				3FC874322B8BD6AE00770A17 /* ContentView.swift */,
 				3FC874342B8BD6AF00770A17 /* Assets.xcassets */,
@@ -65,6 +119,15 @@
 				3FC874372B8BD6AF00770A17 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3FC8743E2B8BDA7800770A17 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				3FC8743F2B8BDA8A00770A17 /* Colors.swift */,
+				3F3979682BA254DD0095E2A1 /* Assets.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +200,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FC874442B8BDD2000770A17 /* SplashScreen.swift in Sources */,
 				3FC874332B8BD6AE00770A17 /* ContentView.swift in Sources */,
+				3F3979692BA254DD0095E2A1 /* Assets.swift in Sources */,
+				3F39796C2BA2591D0095E2A1 /* FilledButton.swift in Sources */,
+				3F1A01432BA4F9FA008AB721 /* ViewExtensions.swift in Sources */,
+				3F39796E2BA25A100095E2A1 /* PlainButton.swift in Sources */,
+				3FC874402B8BDA8A00770A17 /* Colors.swift in Sources */,
 				3FC874312B8BD6AE00770A17 /* ReservyApp.swift in Sources */,
+				3F3979672BA2541E0095E2A1 /* LoginScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +345,7 @@
 				DEVELOPMENT_TEAM = ZWW93GLY4S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Reservy/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +375,7 @@
 				DEVELOPMENT_TEAM = ZWW93GLY4S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Reservy/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
