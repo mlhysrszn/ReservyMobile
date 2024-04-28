@@ -13,6 +13,9 @@
 		3F3900D92BDEC74E00E51AF4 /* BusinessItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3900D82BDEC74E00E51AF4 /* BusinessItemView.swift */; };
 		3F3900DB2BDECAE600E51AF4 /* BusinessListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3900DA2BDECAE600E51AF4 /* BusinessListScreen.swift */; };
 		3F3900DE2BDECD3900E51AF4 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3900DD2BDECD3900E51AF4 /* Business.swift */; };
+		3F3900E02BDED0CC00E51AF4 /* BusinessDetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3900DF2BDED0CC00E51AF4 /* BusinessDetailsScreen.swift */; };
+		3F3900E22BDED34600E51AF4 /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3900E12BDED34600E51AF4 /* IconButton.swift */; };
+		3F3900E42BDED43A00E51AF4 /* BusinessDetailItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3900E32BDED43A00E51AF4 /* BusinessDetailItemRow.swift */; };
 		3F3979672BA2541E0095E2A1 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3979662BA2541E0095E2A1 /* LoginScreen.swift */; };
 		3F3979692BA254DD0095E2A1 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3979682BA254DD0095E2A1 /* Assets.swift */; };
 		3F39796C2BA2591D0095E2A1 /* FilledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F39796B2BA2591D0095E2A1 /* FilledButton.swift */; };
@@ -61,6 +64,9 @@
 		3F3900D82BDEC74E00E51AF4 /* BusinessItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessItemView.swift; sourceTree = "<group>"; };
 		3F3900DA2BDECAE600E51AF4 /* BusinessListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessListScreen.swift; sourceTree = "<group>"; };
 		3F3900DD2BDECD3900E51AF4 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
+		3F3900DF2BDED0CC00E51AF4 /* BusinessDetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetailsScreen.swift; sourceTree = "<group>"; };
+		3F3900E12BDED34600E51AF4 /* IconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
+		3F3900E32BDED43A00E51AF4 /* BusinessDetailItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetailItemRow.swift; sourceTree = "<group>"; };
 		3F3979662BA2541E0095E2A1 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		3F3979682BA254DD0095E2A1 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		3F39796B2BA2591D0095E2A1 /* FilledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilledButton.swift; sourceTree = "<group>"; };
@@ -150,6 +156,7 @@
 				3F3900D42BDEC28200E51AF4 /* SelectCityScreen.swift */,
 				3F3900D62BDEC44C00E51AF4 /* HomeScreen.swift */,
 				3F3900DA2BDECAE600E51AF4 /* BusinessListScreen.swift */,
+				3F3900DF2BDED0CC00E51AF4 /* BusinessDetailsScreen.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -160,6 +167,8 @@
 				3F39796B2BA2591D0095E2A1 /* FilledButton.swift */,
 				3F39796D2BA25A100095E2A1 /* PlainButton.swift */,
 				3F3900D82BDEC74E00E51AF4 /* BusinessItemView.swift */,
+				3F3900E12BDED34600E51AF4 /* IconButton.swift */,
+				3F3900E32BDED43A00E51AF4 /* BusinessDetailItemRow.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -318,17 +327,20 @@
 			files = (
 				3F3900D52BDEC28200E51AF4 /* SelectCityScreen.swift in Sources */,
 				3F3900DB2BDECAE600E51AF4 /* BusinessListScreen.swift in Sources */,
+				3F3900E42BDED43A00E51AF4 /* BusinessDetailItemRow.swift in Sources */,
 				3FCCC4F92BA65C1A001B52B7 /* RegisterScreen.swift in Sources */,
 				3F3900DE2BDECD3900E51AF4 /* Business.swift in Sources */,
 				3FC874442B8BDD2000770A17 /* SplashScreen.swift in Sources */,
 				3FC874332B8BD6AE00770A17 /* ContentView.swift in Sources */,
 				3F3979692BA254DD0095E2A1 /* Assets.swift in Sources */,
 				3F39796C2BA2591D0095E2A1 /* FilledButton.swift in Sources */,
+				3F3900E02BDED0CC00E51AF4 /* BusinessDetailsScreen.swift in Sources */,
 				3F1A01432BA4F9FA008AB721 /* ViewExtensions.swift in Sources */,
 				3F39796E2BA25A100095E2A1 /* PlainButton.swift in Sources */,
 				3F3900D72BDEC44C00E51AF4 /* HomeScreen.swift in Sources */,
 				3FC874402B8BDA8A00770A17 /* Colors.swift in Sources */,
 				3FC874312B8BD6AE00770A17 /* ReservyApp.swift in Sources */,
+				3F3900E22BDED34600E51AF4 /* IconButton.swift in Sources */,
 				3F3979672BA2541E0095E2A1 /* LoginScreen.swift in Sources */,
 				3F3900D92BDEC74E00E51AF4 /* BusinessItemView.swift in Sources */,
 			);

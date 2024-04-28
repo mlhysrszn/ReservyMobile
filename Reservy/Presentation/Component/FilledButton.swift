@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FilledButton: View {
     let label: String
+    var width: CGFloat?
     let action: () -> Void
     
     var body: some View {
@@ -16,6 +17,7 @@ struct FilledButton: View {
             Text(label)
                 .font(.system(size: 18, weight: .medium))
                 .padding(.all, 4)
+                .frame(maxWidth: width)
         })
         .foregroundColor(.white)
         .buttonStyle(.bordered)

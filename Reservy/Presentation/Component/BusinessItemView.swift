@@ -49,13 +49,5 @@ struct BusinessItemView: View {
 }
 
 #Preview {
-    BusinessItemView(
-        business: Business(
-        id: 0,
-        name: "Beauty Center",
-        openHours: "09.00 - 18.00",
-        rating: 3.5,
-        address: "Şükrüpaşa Mahallesi Hasan Maksutoğlu Caddesi No:24 Kat: 1 Daire: 1 Merkez/EDİRNE"
-        )
-    )
+    BusinessItemView(business: dummyBusinessItem)
 }

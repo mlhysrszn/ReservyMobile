@@ -9,10 +9,15 @@ import SwiftUI
 
 struct BusinessListScreen: View {
     var body: some View {
-        ScrollView {
-            LazyVStack {
-                ForEach(dummyBusinessList, id: \.self) { business in
-                    BusinessItemView(business: business)
+        NavigationStack {
+            ScrollView {
+                LazyVStack {
+                    ForEach(dummyBusinessList, id: \.self) { business in
+                        NavigationLink(
+                            destination: BusinessDetailsScreen(business: business)) {
+                            BusinessItemView(business: business)
+                        }.buttonStyle(PlainButtonStyle())
+                    }
                 }
             }
         }
