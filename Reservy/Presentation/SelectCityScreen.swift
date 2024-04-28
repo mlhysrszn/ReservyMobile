@@ -44,10 +44,8 @@ struct SelectCityScreen: View {
                     .padding(.all, 4)
                     .buttonStyle(.bordered)
                     .background(.secondaryBlue)
-                    .cornerRadius(8)
                     .clipShape(RoundedRectangle(cornerRadius: 8))
                     .font(.system(size: 18, weight: .medium))
-                    .padding(.all, 4)
                 Spacer()
             }
             .ignoresSafeArea()
