@@ -9,13 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var showSplash = true
+    @State private var isUserLogged = false
     
     var body: some View {
         Group {
             if showSplash {
                 SplashScreen()
             } else {
-                LoginScreen()
+                if isUserLogged {
+                    SelectCityScreen()
+                } else {
+                    LoginScreen()
+                }
             }
         }.onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
