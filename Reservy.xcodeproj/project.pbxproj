@@ -51,6 +51,7 @@
 		3F7878CC2BAB82A200C799C7 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3F7878CB2BAB82A200C799C7 /* FirebaseRemoteConfigSwift */; };
 		3F7878CE2BAB82A200C799C7 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3F7878CD2BAB82A200C799C7 /* FirebaseStorage */; };
 		3F7878D02BAB82A200C799C7 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 3F7878CF2BAB82A200C799C7 /* FirebaseStorageCombine-Community */; };
+		3F91911F2BE2C3980081EEA0 /* EditProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91911E2BE2C3980081EEA0 /* EditProfileScreen.swift */; };
 		3FC874312B8BD6AE00770A17 /* ReservyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC874302B8BD6AE00770A17 /* ReservyApp.swift */; };
 		3FC874332B8BD6AE00770A17 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC874322B8BD6AE00770A17 /* ContentView.swift */; };
 		3FC874352B8BD6AF00770A17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC874342B8BD6AF00770A17 /* Assets.xcassets */; };
@@ -78,6 +79,7 @@
 		3F4005C72BE187FB002B7D5F /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
 		3F4005C92BE18AD4002B7D5F /* ProfileSectionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSectionButton.swift; sourceTree = "<group>"; };
 		3F7878982BAB81C400C799C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3F91911E2BE2C3980081EEA0 /* EditProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileScreen.swift; sourceTree = "<group>"; };
 		3FC8742D2B8BD6AE00770A17 /* Reservy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reservy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC874302B8BD6AE00770A17 /* ReservyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservyApp.swift; sourceTree = "<group>"; };
 		3FC874322B8BD6AE00770A17 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -155,16 +157,8 @@
 		3F3979652BA253E30095E2A1 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				3F91911D2BE2C36C0081EEA0 /* Screen */,
 				3F39796A2BA258F90095E2A1 /* Component */,
-				3FC874432B8BDD2000770A17 /* SplashScreen.swift */,
-				3F3979662BA2541E0095E2A1 /* LoginScreen.swift */,
-				3FCCC4F82BA65C1A001B52B7 /* RegisterScreen.swift */,
-				3F3900D42BDEC28200E51AF4 /* SelectCityScreen.swift */,
-				3F3900D62BDEC44C00E51AF4 /* HomeScreen.swift */,
-				3F3900DA2BDECAE600E51AF4 /* BusinessListScreen.swift */,
-				3F3900DF2BDED0CC00E51AF4 /* BusinessDetailsScreen.swift */,
-				3F3900E52BDEDBA700E51AF4 /* BookScreen.swift */,
-				3F4005C72BE187FB002B7D5F /* ProfileScreen.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -180,6 +174,23 @@
 				3F4005C92BE18AD4002B7D5F /* ProfileSectionButton.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		3F91911D2BE2C36C0081EEA0 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				3FC874432B8BDD2000770A17 /* SplashScreen.swift */,
+				3F3979662BA2541E0095E2A1 /* LoginScreen.swift */,
+				3FCCC4F82BA65C1A001B52B7 /* RegisterScreen.swift */,
+				3F3900D42BDEC28200E51AF4 /* SelectCityScreen.swift */,
+				3F3900D62BDEC44C00E51AF4 /* HomeScreen.swift */,
+				3F3900DA2BDECAE600E51AF4 /* BusinessListScreen.swift */,
+				3F3900DF2BDED0CC00E51AF4 /* BusinessDetailsScreen.swift */,
+				3F3900E52BDEDBA700E51AF4 /* BookScreen.swift */,
+				3F4005C72BE187FB002B7D5F /* ProfileScreen.swift */,
+				3F91911E2BE2C3980081EEA0 /* EditProfileScreen.swift */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 		3FC874242B8BD6AE00770A17 = {
@@ -347,6 +358,7 @@
 				3F3900E02BDED0CC00E51AF4 /* BusinessDetailsScreen.swift in Sources */,
 				3F1A01432BA4F9FA008AB721 /* ViewExtensions.swift in Sources */,
 				3F39796E2BA25A100095E2A1 /* PlainButton.swift in Sources */,
+				3F91911F2BE2C3980081EEA0 /* EditProfileScreen.swift in Sources */,
 				3F3900D72BDEC44C00E51AF4 /* HomeScreen.swift in Sources */,
 				3FC874402B8BDA8A00770A17 /* Colors.swift in Sources */,
 				3FC874312B8BD6AE00770A17 /* ReservyApp.swift in Sources */,

@@ -16,7 +16,6 @@ struct SplashScreen: View {
                 .frame(width: 256, height: 256)
                 .background(Color.white)
         }
-
     }
 }
 
