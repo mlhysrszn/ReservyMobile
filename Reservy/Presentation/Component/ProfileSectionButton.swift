@@ -8,11 +8,18 @@
 import SwiftUI
 
 struct ProfileSectionButton: View {
+    var icon: String
+    var text: String
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Image(systemName: icon)
+            Text(text)
+            Spacer()
+        }
     }
 }
 
 #Preview {
-    ProfileSectionButton()
+    ProfileSectionButton(icon: "pencil", text: "Edit Profile")
 }

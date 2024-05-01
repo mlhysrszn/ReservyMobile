@@ -21,6 +21,8 @@
 		3F3979692BA254DD0095E2A1 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3979682BA254DD0095E2A1 /* Assets.swift */; };
 		3F39796C2BA2591D0095E2A1 /* FilledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F39796B2BA2591D0095E2A1 /* FilledButton.swift */; };
 		3F39796E2BA25A100095E2A1 /* PlainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F39796D2BA25A100095E2A1 /* PlainButton.swift */; };
+		3F4005C82BE187FB002B7D5F /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4005C72BE187FB002B7D5F /* ProfileScreen.swift */; };
+		3F4005CA2BE18AD4002B7D5F /* ProfileSectionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4005C92BE18AD4002B7D5F /* ProfileSectionButton.swift */; };
 		3F7878992BAB81C400C799C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F7878982BAB81C400C799C7 /* GoogleService-Info.plist */; };
 		3F78789C2BAB82A200C799C7 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3F78789B2BAB82A200C799C7 /* FirebaseAnalytics */; };
 		3F78789E2BAB82A200C799C7 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 3F78789D2BAB82A200C799C7 /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -73,6 +75,8 @@
 		3F3979682BA254DD0095E2A1 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		3F39796B2BA2591D0095E2A1 /* FilledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilledButton.swift; sourceTree = "<group>"; };
 		3F39796D2BA25A100095E2A1 /* PlainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainButton.swift; sourceTree = "<group>"; };
+		3F4005C72BE187FB002B7D5F /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
+		3F4005C92BE18AD4002B7D5F /* ProfileSectionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSectionButton.swift; sourceTree = "<group>"; };
 		3F7878982BAB81C400C799C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3FC8742D2B8BD6AE00770A17 /* Reservy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reservy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC874302B8BD6AE00770A17 /* ReservyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservyApp.swift; sourceTree = "<group>"; };
@@ -160,6 +164,7 @@
 				3F3900DA2BDECAE600E51AF4 /* BusinessListScreen.swift */,
 				3F3900DF2BDED0CC00E51AF4 /* BusinessDetailsScreen.swift */,
 				3F3900E52BDEDBA700E51AF4 /* BookScreen.swift */,
+				3F4005C72BE187FB002B7D5F /* ProfileScreen.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -172,6 +177,7 @@
 				3F3900D82BDEC74E00E51AF4 /* BusinessItemView.swift */,
 				3F3900E12BDED34600E51AF4 /* IconButton.swift */,
 				3F3900E32BDED43A00E51AF4 /* BusinessDetailItemRow.swift */,
+				3F4005C92BE18AD4002B7D5F /* ProfileSectionButton.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -347,6 +353,8 @@
 				3F3900E22BDED34600E51AF4 /* IconButton.swift in Sources */,
 				3F3979672BA2541E0095E2A1 /* LoginScreen.swift in Sources */,
 				3F3900D92BDEC74E00E51AF4 /* BusinessItemView.swift in Sources */,
+				3F4005C82BE187FB002B7D5F /* ProfileScreen.swift in Sources */,
+				3F4005CA2BE18AD4002B7D5F /* ProfileSectionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

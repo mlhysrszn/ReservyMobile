@@ -9,7 +9,16 @@ import SwiftUI
 
 struct HomeScreen: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView {
+            BusinessListScreen()
+                .tabItem {
+                    Label("Home", systemImage: "house")
+                }
+            ProfileScreen()
+                .tabItem {
+                    Label("Profile", systemImage: "person")
+                }
+        }.tint(Color.secondaryBlue)
     }
 }
 

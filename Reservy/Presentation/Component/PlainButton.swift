@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PlainButton: View {
     let label: String
+    var color: Color?
     let action: () -> Void
     
     var body: some View {
@@ -17,7 +18,7 @@ struct PlainButton: View {
                 .font(.system(size: 16))
                 .fontWeight(.medium)
         })
-        .foregroundStyle(.secondaryBlue)
+        .foregroundStyle(color ?? .secondaryBlue)
     }
 }
 
