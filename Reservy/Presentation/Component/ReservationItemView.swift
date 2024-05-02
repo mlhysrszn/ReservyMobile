@@ -16,7 +16,7 @@ struct ReservationItemView: View {
                 Image(Assets.businessIcon)
                     .resizable()
                     .frame(maxWidth: 96, maxHeight: 96)
-                    .clipShape(RoundedRectangle(cornerRadius: 8))
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
                 VStack(alignment: HorizontalAlignment.leading, spacing: 0) {
                     HStack {
                         Text(reservation.business.name)
@@ -37,29 +37,30 @@ struct ReservationItemView: View {
                     Text(reservation.business.address)
                         .font(.system(size: 12))
                         .fontWeight(.regular)
+                        .lineLimit(2)
                 }
             }
             HStack {
                 IconButton(image: "phone") {
-                    
+                    print("Phone button clicked")
                 }
                 IconButton(image: "envelope") {
-                    
+                    print("Envelope button clicked")
                 }
                 IconButton(image: "location") {
-                    
+                    print("Location button clicked")
                 }
                 Spacer()
                 PlainButton(
                     label: reservation.actionText, 
                     color: reservation.actionColor
                 ) {
-                    
+                    print("Action button clicked")
                 }
                 Spacer()
             }
         }
-        .padding()
+        .padding(12)
         .background(Color.white)
         .clipShape(RoundedRectangle(cornerRadius: 16))
         .shadow(radius: 4, x: 0, y: 4)
