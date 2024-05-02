@@ -10,4 +10,5 @@ import Foundation
 struct Assets {
     static let splashIcon = "SplashIcon"
     static let iconWithoutBg = "IconWithoutBg"
+    static let businessIcon = "businessIcon"
 }

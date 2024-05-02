@@ -44,8 +44,9 @@ struct ProfileScreen: View {
                     ) {
                         ProfileSectionButton(icon: "pencil", text: "Edit Profile")
                     }
-                    
-                    ProfileSectionButton(icon: "list.bullet", text: "My Reservations")
+                    NavigationLink(destination: ReservationsScreen()) {
+                        ProfileSectionButton(icon: "list.bullet", text: "My Reservations")
+                    }
                     ProfileSectionButton(icon: "lock.shield", text: "Privacy Policy")
                     ProfileSectionButton(icon: "doc.text", text: "Terms and Conditions")
                     ProfileSectionButton(icon: "star", text: "Rate Us")

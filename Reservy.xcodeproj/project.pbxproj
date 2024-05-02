@@ -59,6 +59,9 @@
 		3FC874402B8BDA8A00770A17 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8743F2B8BDA8A00770A17 /* Colors.swift */; };
 		3FC874442B8BDD2000770A17 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC874432B8BDD2000770A17 /* SplashScreen.swift */; };
 		3FCCC4F92BA65C1A001B52B7 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCCC4F82BA65C1A001B52B7 /* RegisterScreen.swift */; };
+		3FE118E62BE40188001DF5AB /* ReservationsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE118E52BE40188001DF5AB /* ReservationsScreen.swift */; };
+		3FE118E82BE401A0001DF5AB /* ReservationItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE118E72BE401A0001DF5AB /* ReservationItemView.swift */; };
+		3FE118EA2BE401F4001DF5AB /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE118E92BE401F4001DF5AB /* Reservation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +92,9 @@
 		3FC874432B8BDD2000770A17 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		3FC874452B8BE5BF00770A17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3FCCC4F82BA65C1A001B52B7 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
+		3FE118E52BE40188001DF5AB /* ReservationsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationsScreen.swift; sourceTree = "<group>"; };
+		3FE118E72BE401A0001DF5AB /* ReservationItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationItemView.swift; sourceTree = "<group>"; };
+		3FE118E92BE401F4001DF5AB /* Reservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				3F3900DD2BDECD3900E51AF4 /* Business.swift */,
+				3FE118E92BE401F4001DF5AB /* Reservation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -172,6 +179,7 @@
 				3F3900E12BDED34600E51AF4 /* IconButton.swift */,
 				3F3900E32BDED43A00E51AF4 /* BusinessDetailItemRow.swift */,
 				3F4005C92BE18AD4002B7D5F /* ProfileSectionButton.swift */,
+				3FE118E72BE401A0001DF5AB /* ReservationItemView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -189,6 +197,7 @@
 				3F3900E52BDEDBA700E51AF4 /* BookScreen.swift */,
 				3F4005C72BE187FB002B7D5F /* ProfileScreen.swift */,
 				3F91911E2BE2C3980081EEA0 /* EditProfileScreen.swift */,
+				3FE118E52BE40188001DF5AB /* ReservationsScreen.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -361,10 +370,13 @@
 				3F91911F2BE2C3980081EEA0 /* EditProfileScreen.swift in Sources */,
 				3F3900D72BDEC44C00E51AF4 /* HomeScreen.swift in Sources */,
 				3FC874402B8BDA8A00770A17 /* Colors.swift in Sources */,
+				3FE118E82BE401A0001DF5AB /* ReservationItemView.swift in Sources */,
 				3FC874312B8BD6AE00770A17 /* ReservyApp.swift in Sources */,
 				3F3900E22BDED34600E51AF4 /* IconButton.swift in Sources */,
 				3F3979672BA2541E0095E2A1 /* LoginScreen.swift in Sources */,
+				3FE118E62BE40188001DF5AB /* ReservationsScreen.swift in Sources */,
 				3F3900D92BDEC74E00E51AF4 /* BusinessItemView.swift in Sources */,
+				3FE118EA2BE401F4001DF5AB /* Reservation.swift in Sources */,
 				3F4005C82BE187FB002B7D5F /* ProfileScreen.swift in Sources */,
 				3F4005CA2BE18AD4002B7D5F /* ProfileSectionButton.swift in Sources */,
 			);
