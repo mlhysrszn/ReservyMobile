@@ -8,21 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var authManager: AuthManager
     @State private var showSplash = true
-    @State private var isUserLogged = false
     
     var body: some View {
         Group {
             if showSplash {
                 SplashScreen()
             } else {
-                if isUserLogged {
-                    SelectCityScreen()
+                if authManager.isUserSignedIn {
+                    HomeScreen()
                 } else {
                     LoginScreen()
                 }
             }
-        }.onAppear {
+        }
+        .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 withAnimation {
                     self.showSplash = false

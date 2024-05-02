@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LoginScreen: View {
+    @EnvironmentObject var authManager: AuthManager
     
     enum Field {
         case email
@@ -17,6 +18,7 @@ struct LoginScreen: View {
     @State private var email: String = ""
     @State private var password: String = ""
     @FocusState private var focusedField: Field?
+    @State private var isLoading: Bool = false
     
     var body: some View {
         NavigationStack {
@@ -69,10 +71,24 @@ struct LoginScreen: View {
                 }
                 Spacer()
                 VStack(spacing: 24) {
-                    FilledButton(label: "Login") {
-                        print("Login Clicked")
+                    FilledButton(label: "Login", isLoading: isLoading) {
+                        Task {
+                            do {
+                                isLoading = true
+                                try await authManager.signIn(
+                                    email: email,
+                                    password: password
+                                )
+                            } catch {
+                                print(error.localizedDescription)
+                            }
+                            isLoading = false
+                        }
                     }
-                    NavigationLink("Don’t you have an account? Register",destination: RegisterScreen())
+                    NavigationLink(
+                        "Don’t you have an account? Register",
+                        destination: RegisterScreen().environmentObject(authManager)
+                    )
                         .font(.system(size: 16))
                         .fontWeight(.medium)
                         .foregroundStyle(.secondaryBlue)

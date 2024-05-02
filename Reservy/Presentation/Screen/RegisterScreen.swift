@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct RegisterScreen: View {
+    @EnvironmentObject var authManager: AuthManager
     
     enum Field {
         case firstName
@@ -26,6 +27,7 @@ struct RegisterScreen: View {
     @State private var secondPassword: String = ""
     @FocusState private var focusedField: Field?
     @Environment(\.dismiss) private var dismiss
+    @State private var isLoading = false
     
     var body: some View {
         NavigationStack {
@@ -108,7 +110,21 @@ struct RegisterScreen: View {
                 Spacer()
                 VStack(spacing: 24) {
                     FilledButton(label: "Register") {
-                        print("Register Clicked")
+                        Task {
+                            do {
+                                isLoading = true
+                                try await authManager.signUp(
+                                    firstName: firstName,
+                                    lastName: lastName,
+                                    email: email,
+                                    phoneNumber: phoneNumber,
+                                    password: password
+                                )
+                            } catch {
+                                print(error)
+                            }
+                            isLoading = false
+                        }
                     }
                     PlainButton(label: "Do you have an account? Login") {
                         print("Login clicked")

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HomeScreen: View {
+    @EnvironmentObject var authManager: AuthManager
+    
     var body: some View {
         TabView {
             BusinessListScreen()
@@ -15,6 +17,7 @@ struct HomeScreen: View {
                     Label("Home", systemImage: "house")
                 }
             ProfileScreen()
+                .environmentObject(authManager)
                 .tabItem {
                     Label("Profile", systemImage: "person")
                 }
