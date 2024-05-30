@@ -23,6 +23,23 @@
 		3F39796E2BA25A100095E2A1 /* PlainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F39796D2BA25A100095E2A1 /* PlainButton.swift */; };
 		3F4005C82BE187FB002B7D5F /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4005C72BE187FB002B7D5F /* ProfileScreen.swift */; };
 		3F4005CA2BE18AD4002B7D5F /* ProfileSectionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4005C92BE18AD4002B7D5F /* ProfileSectionButton.swift */; };
+		3F44320C2C0653F700434223 /* NetworkExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44320B2C0653F700434223 /* NetworkExtensions.swift */; };
+		3F44320F2C06557400434223 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44320E2C06557400434223 /* HttpMethod.swift */; };
+		3F4432112C0655D900434223 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4432102C0655D900434223 /* UserDefaultsManager.swift */; };
+		3F4432132C06564B00434223 /* UserDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4432122C06564B00434223 /* UserDefaultKeys.swift */; };
+		3F4432152C06627500434223 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4432142C06627500434223 /* Location.swift */; };
+		3F4432172C06628500434223 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4432162C06628500434223 /* Review.swift */; };
+		3F44321A2C06634E00434223 /* BusinessListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4432192C06634E00434223 /* BusinessListViewModel.swift */; };
+		3F4B1AA32BF6930600556803 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B1AA22BF6930600556803 /* User.swift */; };
+		3F4B1AA62BF6936D00556803 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B1AA52BF6936D00556803 /* NetworkManager.swift */; };
+		3F4B1AA82BF6944D00556803 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B1AA72BF6944D00556803 /* NetworkError.swift */; };
+		3F4B1AAB2BF6956500556803 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B1AAA2BF6956500556803 /* RegisterViewModel.swift */; };
+		3F4B1AAE2BF695C100556803 /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B1AAD2BF695C100556803 /* RegisterRequest.swift */; };
+		3F4B1AB02BF6961500556803 /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B1AAF2BF6961500556803 /* ApiConstants.swift */; };
+		3F4B1AB22BF6992300556803 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B1AB12BF6992300556803 /* ErrorResponse.swift */; };
+		3F4B1AB42BF6A0BA00556803 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B1AB32BF6A0BA00556803 /* Endpoint.swift */; };
+		3F4B1AB72BF6A42500556803 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3F4B1AB62BF6A42500556803 /* Alamofire */; };
+		3F4B1AB92BF6A42500556803 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 3F4B1AB82BF6A42500556803 /* AlamofireDynamic */; };
 		3F7878992BAB81C400C799C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F7878982BAB81C400C799C7 /* GoogleService-Info.plist */; };
 		3F78789C2BAB82A200C799C7 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3F78789B2BAB82A200C799C7 /* FirebaseAnalytics */; };
 		3F78789E2BAB82A200C799C7 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 3F78789D2BAB82A200C799C7 /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -63,6 +80,9 @@
 		3FE118E82BE401A0001DF5AB /* ReservationItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE118E72BE401A0001DF5AB /* ReservationItemView.swift */; };
 		3FE118EA2BE401F4001DF5AB /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE118E92BE401F4001DF5AB /* Reservation.swift */; };
 		3FE118ED2BE40CD8001DF5AB /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE118EC2BE40CD8001DF5AB /* AuthManager.swift */; };
+		3FED20DB2C052361009E2F9F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FED20DA2C052361009E2F9F /* LoginViewModel.swift */; };
+		3FED20DD2C052427009E2F9F /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FED20DC2C052427009E2F9F /* LoginRequest.swift */; };
+		3FED20DF2C0525ED009E2F9F /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FED20DE2C0525ED009E2F9F /* BaseResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +102,21 @@
 		3F39796D2BA25A100095E2A1 /* PlainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainButton.swift; sourceTree = "<group>"; };
 		3F4005C72BE187FB002B7D5F /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
 		3F4005C92BE18AD4002B7D5F /* ProfileSectionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSectionButton.swift; sourceTree = "<group>"; };
+		3F44320B2C0653F700434223 /* NetworkExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkExtensions.swift; sourceTree = "<group>"; };
+		3F44320E2C06557400434223 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
+		3F4432102C0655D900434223 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		3F4432122C06564B00434223 /* UserDefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKeys.swift; sourceTree = "<group>"; };
+		3F4432142C06627500434223 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		3F4432162C06628500434223 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		3F4432192C06634E00434223 /* BusinessListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessListViewModel.swift; sourceTree = "<group>"; };
+		3F4B1AA22BF6930600556803 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3F4B1AA52BF6936D00556803 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		3F4B1AA72BF6944D00556803 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		3F4B1AAA2BF6956500556803 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		3F4B1AAD2BF695C100556803 /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
+		3F4B1AAF2BF6961500556803 /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
+		3F4B1AB12BF6992300556803 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		3F4B1AB32BF6A0BA00556803 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		3F7878982BAB81C400C799C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3F91911E2BE2C3980081EEA0 /* EditProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileScreen.swift; sourceTree = "<group>"; };
 		3FC8742D2B8BD6AE00770A17 /* Reservy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reservy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +132,9 @@
 		3FE118E72BE401A0001DF5AB /* ReservationItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationItemView.swift; sourceTree = "<group>"; };
 		3FE118E92BE401F4001DF5AB /* Reservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
 		3FE118EC2BE40CD8001DF5AB /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		3FED20DA2C052361009E2F9F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		3FED20DC2C052427009E2F9F /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		3FED20DE2C0525ED009E2F9F /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F7878AE2BAB82A200C799C7 /* FirebaseDatabase in Frameworks */,
+				3F4B1AB72BF6A42500556803 /* Alamofire in Frameworks */,
 				3F7878BC2BAB82A200C799C7 /* FirebaseFunctionsCombine-Community in Frameworks */,
 				3F7878B42BAB82A200C799C7 /* FirebaseFirestore in Frameworks */,
 				3F7878A02BAB82A200C799C7 /* FirebaseAnalyticsSwift in Frameworks */,
@@ -114,6 +153,7 @@
 				3F7878B82BAB82A200C799C7 /* FirebaseFirestoreSwift in Frameworks */,
 				3F7878A42BAB82A200C799C7 /* FirebaseAppCheck in Frameworks */,
 				3F7878A22BAB82A200C799C7 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				3F4B1AB92BF6A42500556803 /* AlamofireDynamic in Frameworks */,
 				3F7878A82BAB82A200C799C7 /* FirebaseAuth in Frameworks */,
 				3F7878AC2BAB82A200C799C7 /* FirebaseCrashlytics in Frameworks */,
 				3F7878CC2BAB82A200C799C7 /* FirebaseRemoteConfigSwift in Frameworks */,
@@ -150,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				3F1A01422BA4F9FA008AB721 /* ViewExtensions.swift */,
+				3F44320B2C0653F700434223 /* NetworkExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -159,6 +200,9 @@
 			children = (
 				3F3900DD2BDECD3900E51AF4 /* Business.swift */,
 				3FE118E92BE401F4001DF5AB /* Reservation.swift */,
+				3F4B1AA22BF6930600556803 /* User.swift */,
+				3F4432142C06627500434223 /* Location.swift */,
+				3F4432162C06628500434223 /* Review.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -186,15 +230,65 @@
 			path = Component;
 			sourceTree = "<group>";
 		};
+		3F44320D2C06555600434223 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				3F4B1AA72BF6944D00556803 /* NetworkError.swift */,
+				3F4B1AB32BF6A0BA00556803 /* Endpoint.swift */,
+				3F44320E2C06557400434223 /* HttpMethod.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		3F4432182C06633100434223 /* BusinessList */ = {
+			isa = PBXGroup;
+			children = (
+				3F3900DA2BDECAE600E51AF4 /* BusinessListScreen.swift */,
+				3F4432192C06634E00434223 /* BusinessListViewModel.swift */,
+			);
+			path = BusinessList;
+			sourceTree = "<group>";
+		};
+		3F4B1AA42BF6935B00556803 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3F44320D2C06555600434223 /* Enum */,
+				3F4B1AAC2BF695AC00556803 /* Model */,
+				3F4B1AA52BF6936D00556803 /* NetworkManager.swift */,
+				3F4B1AAF2BF6961500556803 /* ApiConstants.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		3F4B1AA92BF6955400556803 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				3FCCC4F82BA65C1A001B52B7 /* RegisterScreen.swift */,
+				3F4B1AAA2BF6956500556803 /* RegisterViewModel.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		3F4B1AAC2BF695AC00556803 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3F4B1AAD2BF695C100556803 /* RegisterRequest.swift */,
+				3F4B1AB12BF6992300556803 /* ErrorResponse.swift */,
+				3FED20DC2C052427009E2F9F /* LoginRequest.swift */,
+				3FED20DE2C0525ED009E2F9F /* BaseResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		3F91911D2BE2C36C0081EEA0 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				3F4432182C06633100434223 /* BusinessList */,
+				3FED20D92C052352009E2F9F /* Login */,
+				3F4B1AA92BF6955400556803 /* Register */,
 				3FC874432B8BDD2000770A17 /* SplashScreen.swift */,
-				3F3979662BA2541E0095E2A1 /* LoginScreen.swift */,
-				3FCCC4F82BA65C1A001B52B7 /* RegisterScreen.swift */,
 				3F3900D42BDEC28200E51AF4 /* SelectCityScreen.swift */,
 				3F3900D62BDEC44C00E51AF4 /* HomeScreen.swift */,
-				3F3900DA2BDECAE600E51AF4 /* BusinessListScreen.swift */,
 				3F3900DF2BDED0CC00E51AF4 /* BusinessDetailsScreen.swift */,
 				3F3900E52BDEDBA700E51AF4 /* BookScreen.swift */,
 				3F4005C72BE187FB002B7D5F /* ProfileScreen.swift */,
@@ -223,6 +317,7 @@
 		3FC8742F2B8BD6AE00770A17 /* Reservy */ = {
 			isa = PBXGroup;
 			children = (
+				3F4B1AA42BF6935B00556803 /* Network */,
 				3FE118EB2BE40CC9001DF5AB /* Manager */,
 				3F3900DC2BDECD2D00E51AF4 /* Model */,
 				3F1A013F2BA4F9D5008AB721 /* Utils */,
@@ -250,6 +345,7 @@
 			children = (
 				3FC8743F2B8BDA8A00770A17 /* Colors.swift */,
 				3F3979682BA254DD0095E2A1 /* Assets.swift */,
+				3F4432122C06564B00434223 /* UserDefaultKeys.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -258,8 +354,18 @@
 			isa = PBXGroup;
 			children = (
 				3FE118EC2BE40CD8001DF5AB /* AuthManager.swift */,
+				3F4432102C0655D900434223 /* UserDefaultsManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		3FED20D92C052352009E2F9F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3F3979662BA2541E0095E2A1 /* LoginScreen.swift */,
+				3FED20DA2C052361009E2F9F /* LoginViewModel.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,6 +412,8 @@
 				3F7878CB2BAB82A200C799C7 /* FirebaseRemoteConfigSwift */,
 				3F7878CD2BAB82A200C799C7 /* FirebaseStorage */,
 				3F7878CF2BAB82A200C799C7 /* FirebaseStorageCombine-Community */,
+				3F4B1AB62BF6A42500556803 /* Alamofire */,
+				3F4B1AB82BF6A42500556803 /* AlamofireDynamic */,
 			);
 			productName = Reservy;
 			productReference = 3FC8742D2B8BD6AE00770A17 /* Reservy.app */;
@@ -337,6 +445,7 @@
 			mainGroup = 3FC874242B8BD6AE00770A17;
 			packageReferences = (
 				3F78789A2BAB82A200C799C7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				3F4B1AB52BF6A42500556803 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 3FC8742E2B8BD6AE00770A17 /* Products */;
 			projectDirPath = "";
@@ -366,17 +475,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F3900D52BDEC28200E51AF4 /* SelectCityScreen.swift in Sources */,
+				3F4B1AAB2BF6956500556803 /* RegisterViewModel.swift in Sources */,
+				3F4B1AA82BF6944D00556803 /* NetworkError.swift in Sources */,
 				3F3900DB2BDECAE600E51AF4 /* BusinessListScreen.swift in Sources */,
+				3F4B1AB02BF6961500556803 /* ApiConstants.swift in Sources */,
 				3F3900E42BDED43A00E51AF4 /* BusinessDetailItemRow.swift in Sources */,
+				3F4432112C0655D900434223 /* UserDefaultsManager.swift in Sources */,
 				3FE118ED2BE40CD8001DF5AB /* AuthManager.swift in Sources */,
+				3F4B1AB22BF6992300556803 /* ErrorResponse.swift in Sources */,
+				3FED20DF2C0525ED009E2F9F /* BaseResponse.swift in Sources */,
 				3FCCC4F92BA65C1A001B52B7 /* RegisterScreen.swift in Sources */,
+				3F4B1AA32BF6930600556803 /* User.swift in Sources */,
 				3F3900DE2BDECD3900E51AF4 /* Business.swift in Sources */,
 				3FC874442B8BDD2000770A17 /* SplashScreen.swift in Sources */,
 				3FC874332B8BD6AE00770A17 /* ContentView.swift in Sources */,
+				3F44320C2C0653F700434223 /* NetworkExtensions.swift in Sources */,
+				3FED20DB2C052361009E2F9F /* LoginViewModel.swift in Sources */,
+				3F4B1AAE2BF695C100556803 /* RegisterRequest.swift in Sources */,
 				3F3979692BA254DD0095E2A1 /* Assets.swift in Sources */,
 				3F3900E62BDEDBA700E51AF4 /* BookScreen.swift in Sources */,
 				3F39796C2BA2591D0095E2A1 /* FilledButton.swift in Sources */,
 				3F3900E02BDED0CC00E51AF4 /* BusinessDetailsScreen.swift in Sources */,
+				3F4432132C06564B00434223 /* UserDefaultKeys.swift in Sources */,
 				3F1A01432BA4F9FA008AB721 /* ViewExtensions.swift in Sources */,
 				3F39796E2BA25A100095E2A1 /* PlainButton.swift in Sources */,
 				3F91911F2BE2C3980081EEA0 /* EditProfileScreen.swift in Sources */,
@@ -384,12 +504,19 @@
 				3FC874402B8BDA8A00770A17 /* Colors.swift in Sources */,
 				3FE118E82BE401A0001DF5AB /* ReservationItemView.swift in Sources */,
 				3FC874312B8BD6AE00770A17 /* ReservyApp.swift in Sources */,
+				3F44320F2C06557400434223 /* HttpMethod.swift in Sources */,
 				3F3900E22BDED34600E51AF4 /* IconButton.swift in Sources */,
+				3FED20DD2C052427009E2F9F /* LoginRequest.swift in Sources */,
 				3F3979672BA2541E0095E2A1 /* LoginScreen.swift in Sources */,
+				3F4432152C06627500434223 /* Location.swift in Sources */,
 				3FE118E62BE40188001DF5AB /* ReservationsScreen.swift in Sources */,
 				3F3900D92BDEC74E00E51AF4 /* BusinessItemView.swift in Sources */,
+				3F4432172C06628500434223 /* Review.swift in Sources */,
+				3F44321A2C06634E00434223 /* BusinessListViewModel.swift in Sources */,
+				3F4B1AA62BF6936D00556803 /* NetworkManager.swift in Sources */,
 				3FE118EA2BE401F4001DF5AB /* Reservation.swift in Sources */,
 				3F4005C82BE187FB002B7D5F /* ProfileScreen.swift in Sources */,
+				3F4B1AB42BF6A0BA00556803 /* Endpoint.swift in Sources */,
 				3F4005CA2BE18AD4002B7D5F /* ProfileSectionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -600,6 +727,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3F4B1AB52BF6A42500556803 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
 		3F78789A2BAB82A200C799C7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -611,6 +746,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3F4B1AB62BF6A42500556803 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F4B1AB52BF6A42500556803 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		3F4B1AB82BF6A42500556803 /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F4B1AB52BF6A42500556803 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
 		3F78789B2BAB82A200C799C7 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3F78789A2BAB82A200C799C7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

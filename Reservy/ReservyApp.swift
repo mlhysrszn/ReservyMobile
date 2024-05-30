@@ -19,12 +19,12 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct ReservyApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    @StateObject var authManager = AuthManager.shared
+    private var userDefaultsManager = UserDefaultsManager.shared
     
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(authManager)
+                .environmentObject(userDefaultsManager)
         }
     }
 }

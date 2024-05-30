@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProfileScreen: View {
-    @EnvironmentObject var authManager: AuthManager
+    @ObservedObject var userDefaults = UserDefaultsManager.shared
     @State private var isLoading: Bool = false
     
     let sections = [
@@ -58,15 +58,7 @@ struct ProfileScreen: View {
                 .scrollDisabled(true)
                 Spacer()
                 PlainButton(label: "Logout", color: Color.red, isLoading: isLoading) {
-                    Task {
-                        do {
-                            isLoading = true
-                            try await authManager.signOut()
-                        } catch {
-                            print(error)
-                        }
-                        isLoading = false
-                    }
+                    userDefaults.isUserLoggedIn = false
                 }
                 .padding(.bottom, 24)
             }

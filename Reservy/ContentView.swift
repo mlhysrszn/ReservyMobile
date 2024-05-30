@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var authManager: AuthManager
     @State private var showSplash = true
+    @ObservedObject private var userDefaults = UserDefaultsManager.shared
     
     var body: some View {
         Group {
             if showSplash {
                 SplashScreen()
             } else {
-                if authManager.isUserSignedIn {
+                if userDefaults.isUserLoggedIn {
                     HomeScreen()
                 } else {
                     LoginScreen()

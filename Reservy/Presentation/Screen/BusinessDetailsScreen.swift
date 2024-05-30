@@ -40,7 +40,7 @@ struct BusinessDetailsScreen: View {
                     )
                     BusinessDetailItemRow(
                         title: "Mail",
-                        subTitle: business.mail,
+                        subTitle: business.email,
                         iconName: "envelope",
                         action: {}
                     )
@@ -52,7 +52,7 @@ struct BusinessDetailsScreen: View {
                     )
                     BusinessDetailItemRow(
                         title: "Working Hours",
-                        subTitle: "Working hours will be implemented",
+                        subTitle: business.workingHours,
                         action: {}
                     )
                     NavigationLink("Book Now") {
@@ -72,8 +72,4 @@ struct BusinessDetailsScreen: View {
             .navigationBarTitleDisplayMode(.automatic)
         }
     }
-}
-
-#Preview {
-    BusinessDetailsScreen(business: dummyBusinessItem)
 }

@@ -24,7 +24,7 @@ struct BusinessItemView: View {
                             .font(.system(size: 18))
                             .fontWeight(.semibold)
                             .padding(.trailing, 4)
-                        Text(business.openHours)
+                        Text(business.workingHours)
                             .font(.system(size: 10))
                             .fontWeight(.light)
                         Spacer()
@@ -46,8 +46,4 @@ struct BusinessItemView: View {
         .clipShape(RoundedRectangle(cornerRadius: 8))
         .padding(.horizontal, 16)
     }
-}
-
-#Preview {
-    BusinessItemView(business: dummyBusinessItem)
 }

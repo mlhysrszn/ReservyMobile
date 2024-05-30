@@ -8,18 +8,14 @@
 import SwiftUI
 
 struct LoginScreen: View {
-    @EnvironmentObject var authManager: AuthManager
-    
+    @StateObject private var viewModel = LoginViewModel()
+    @FocusState private var focusedField: Field?
+
     enum Field {
         case email
         case password
     }
-    
-    @State private var email: String = ""
-    @State private var password: String = ""
-    @FocusState private var focusedField: Field?
-    @State private var isLoading: Bool = false
-    
+
     var body: some View {
         NavigationStack {
             VStack(alignment: .center) {
@@ -42,19 +38,20 @@ struct LoginScreen: View {
                             .fontWeight(.semibold)
                             .font(.largeTitle)
                             .padding(.top, -16)
-                    }.padding(.top, 32)
+                    }
+                    .padding(.top, 32)
                 }
                 .frame(height: 312, alignment: .top)
                 Spacer()
                 VStack {
-                    TextField("Email", text: $email)
+                    TextField("Email", text: $viewModel.email)
                         .keyboardType(.emailAddress)
                         .focused($focusedField, equals: .email)
                         .textContentType(.emailAddress)
                         .submitLabel(.next)
                         .padding(.vertical, 24)
                         .overlay(Divider().padding(.top, 32))
-                    SecureField("Password", text: $password)
+                    SecureField("Password", text: $viewModel.password)
                         .focused($focusedField, equals: .password)
                         .textContentType(.password)
                         .submitLabel(.done)
@@ -71,33 +68,34 @@ struct LoginScreen: View {
                 }
                 Spacer()
                 VStack(spacing: 24) {
-                    FilledButton(label: "Login", isLoading: isLoading) {
+                    FilledButton(label: "Login", isLoading: viewModel.isLoading) {
                         Task {
-                            do {
-                                isLoading = true
-                                try await authManager.signIn(
-                                    email: email,
-                                    password: password
-                                )
-                            } catch {
-                                print(error.localizedDescription)
-                            }
-                            isLoading = false
+                            await viewModel.login()
                         }
                     }
                     NavigationLink(
                         "Don’t you have an account? Register",
-                        destination: RegisterScreen().environmentObject(authManager)
+                        destination: RegisterScreen()
                     )
-                        .font(.system(size: 16))
-                        .fontWeight(.medium)
-                        .foregroundStyle(.secondaryBlue)
+                    .font(.system(size: 16))
+                    .fontWeight(.medium)
+                    .foregroundStyle(.secondaryBlue)
                 }
                 Spacer()
             }
             .ignoresSafeArea()
             .onTapGesture {
                 self.hideKeyboard()
+            }
+            .alert(isPresented: Binding<Bool>(
+                get: { viewModel.errorMessage != nil },
+                set: { _ in viewModel.errorMessage = nil }
+            )) {
+                Alert(
+                    title: Text("Error"),
+                    message: Text(viewModel.errorMessage ?? "Unknown error"),
+                    dismissButton: .default(Text("OK"))
+                )
             }
         }
     }

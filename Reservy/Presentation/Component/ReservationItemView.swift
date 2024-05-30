@@ -67,7 +67,3 @@ struct ReservationItemView: View {
         .padding(.horizontal, 16)
     }
 }
-
-#Preview {
-    ReservationItemView(reservation: dummyReservation)
-}
