@@ -13,6 +13,7 @@ enum Endpoint {
     case businessList
     case availableHours
     case book
+    case getUserById
 }
 
 protocol EndpointProtocol {
@@ -52,6 +53,8 @@ extension Endpoint: EndpointProtocol {
             return "get_available_hours"        
         case .book:
             return "book"
+        case .getUserById:
+            return "get_user_by_id"
         }
     }
     
@@ -66,6 +69,8 @@ extension Endpoint: EndpointProtocol {
         case .availableHours:
             return .post        
         case .book:
+            return .post  
+        case .getUserById:
             return .post
         }
     }

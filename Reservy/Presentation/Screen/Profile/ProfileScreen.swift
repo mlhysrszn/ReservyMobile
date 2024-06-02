@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct ProfileScreen: View {
-    @ObservedObject var userDefaults = UserDefaultsManager.shared
-    @State private var isLoading: Bool = false
+    @StateObject private var viewModel = ProfileViewModel()
     
     let sections = [
         ProfileSection(icon: "pencil", text: "Edit Profile"),
@@ -22,47 +21,52 @@ struct ProfileScreen: View {
     
     var body: some View {
         NavigationStack {
-            VStack {
-                Image(Assets.iconWithoutBg)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 192, height: 192)
-                    .clipShape(Circle())
-                    .padding(.top, 20)
-                Text("Melih Yaşar SÖZEN")
-                    .font(.system(size: 24))
-                    .fontWeight(.semibold)
-                    .padding(.top, 16)
-                Spacer()
-                List {
-                    NavigationLink(
-                        destination: EditProfileScreen(
-                            firstName: "Melih Yaşar",
-                            lastName: "SÖZEN",
-                            email: "mlhysrszn@gmail.com",
-                            phoneNumber: "+905350786767",
-                            city: "Edirne"
-                        )
-                    ) {
-                        ProfileSectionButton(icon: "pencil", text: "Edit Profile")
+            if viewModel.isLoading {
+                ProgressView()
+            } else if let user = viewModel.user {
+                VStack {
+                    Image(Assets.iconWithoutBg)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 192, height: 192)
+                        .clipShape(Circle())
+                        .padding(.top, 20)
+                    Text("\(viewModel.user?.firstname ?? "") \(viewModel.user?.lastname ?? "")")
+                        .font(.system(size: 24))
+                        .fontWeight(.semibold)
+                        .padding(.top, 16)
+                    Spacer()
+                    List {
+                        NavigationLink(
+                            destination: EditProfileScreen(user: user)
+                        ) {
+                            ProfileSectionButton(icon: "pencil", text: "Edit Profile")
+                        }
+                        NavigationLink(destination: ReservationsScreen()) {
+                            ProfileSectionButton(icon: "list.bullet", text: "My Reservations")
+                        }
+                        ProfileSectionButton(icon: "lock.shield", text: "Privacy Policy")
+                        ProfileSectionButton(icon: "doc.text", text: "Terms and Conditions")
+                        ProfileSectionButton(icon: "star", text: "Rate Us")
+                        ProfileSectionButton(icon: "trash", text: "Delete Account")
                     }
-                    NavigationLink(destination: ReservationsScreen()) {
-                        ProfileSectionButton(icon: "list.bullet", text: "My Reservations")
+                    .scrollContentBackground(.hidden)
+                    .scrollDisabled(true)
+                    Spacer()
+                    PlainButton(label: "Logout", color: Color.red, isLoading: viewModel.isLoading) {
+                        viewModel.logout()
                     }
-                    ProfileSectionButton(icon: "lock.shield", text: "Privacy Policy")
-                    ProfileSectionButton(icon: "doc.text", text: "Terms and Conditions")
-                    ProfileSectionButton(icon: "star", text: "Rate Us")
-                    ProfileSectionButton(icon: "trash", text: "Delete Account")
+                    .padding(.bottom, 24)
                 }
-                .scrollContentBackground(.hidden)
-                .scrollDisabled(true)
-                Spacer()
-                PlainButton(label: "Logout", color: Color.red, isLoading: isLoading) {
-                    userDefaults.isUserLoggedIn = false
-                }
-                .padding(.bottom, 24)
+                .padding()
+            } else {
+                Text(viewModel.errorMessage)
             }
-            .padding()
+        }
+        .onAppear {
+            Task {
+                await viewModel.fetchUserById()
+            }
         }
     }
 }

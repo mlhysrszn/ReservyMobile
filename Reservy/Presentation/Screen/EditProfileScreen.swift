@@ -16,6 +16,7 @@ struct EditProfileScreen: View {
         case city
     }
     
+    let user: User
     @State var firstName = ""
     @State var lastName = ""
     @State var email = ""
@@ -92,8 +93,4 @@ struct EditProfileScreen: View {
         }
         .padding(24)
     }
-}
-
-#Preview {
-    EditProfileScreen()
 }
