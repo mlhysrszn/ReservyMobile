@@ -16,7 +16,6 @@
 		3F3900E02BDED0CC00E51AF4 /* BusinessDetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3900DF2BDED0CC00E51AF4 /* BusinessDetailsScreen.swift */; };
 		3F3900E22BDED34600E51AF4 /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3900E12BDED34600E51AF4 /* IconButton.swift */; };
 		3F3900E42BDED43A00E51AF4 /* BusinessDetailItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3900E32BDED43A00E51AF4 /* BusinessDetailItemRow.swift */; };
-		3F3900E62BDEDBA700E51AF4 /* BookScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3900E52BDEDBA700E51AF4 /* BookScreen.swift */; };
 		3F3979672BA2541E0095E2A1 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3979662BA2541E0095E2A1 /* LoginScreen.swift */; };
 		3F3979692BA254DD0095E2A1 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3979682BA254DD0095E2A1 /* Assets.swift */; };
 		3F39796C2BA2591D0095E2A1 /* FilledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F39796B2BA2591D0095E2A1 /* FilledButton.swift */; };
@@ -30,6 +29,10 @@
 		3F4432152C06627500434223 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4432142C06627500434223 /* Location.swift */; };
 		3F4432172C06628500434223 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4432162C06628500434223 /* Review.swift */; };
 		3F44321A2C06634E00434223 /* BusinessListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4432192C06634E00434223 /* BusinessListViewModel.swift */; };
+		3F47FB632C0BCDB7009EA767 /* BookScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F47FB622C0BCDB7009EA767 /* BookScreen.swift */; };
+		3F47FB652C0BCE1C009EA767 /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F47FB642C0BCE1C009EA767 /* BookViewModel.swift */; };
+		3F47FB672C0BCE5D009EA767 /* Hour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F47FB662C0BCE5D009EA767 /* Hour.swift */; };
+		3F47FB692C0BCF20009EA767 /* AvailableHoursRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F47FB682C0BCF20009EA767 /* AvailableHoursRequest.swift */; };
 		3F4B1AA32BF6930600556803 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B1AA22BF6930600556803 /* User.swift */; };
 		3F4B1AA62BF6936D00556803 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B1AA52BF6936D00556803 /* NetworkManager.swift */; };
 		3F4B1AA82BF6944D00556803 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B1AA72BF6944D00556803 /* NetworkError.swift */; };
@@ -40,6 +43,10 @@
 		3F4B1AB42BF6A0BA00556803 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B1AB32BF6A0BA00556803 /* Endpoint.swift */; };
 		3F4B1AB72BF6A42500556803 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3F4B1AB62BF6A42500556803 /* Alamofire */; };
 		3F4B1AB92BF6A42500556803 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 3F4B1AB82BF6A42500556803 /* AlamofireDynamic */; };
+		3F6FCE2E2C08FAA10057B34E /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6FCE2D2C08FAA10057B34E /* ProfileViewModel.swift */; };
+		3F6FCE302C09021B0057B34E /* Workday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6FCE2F2C09021B0057B34E /* Workday.swift */; };
+		3F7516852C0CACEA00FA06F0 /* BookingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7516842C0CACEA00FA06F0 /* BookingRequest.swift */; };
+		3F7516872C0CB16A00FA06F0 /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7516862C0CB16A00FA06F0 /* EmptyResponse.swift */; };
 		3F7878992BAB81C400C799C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F7878982BAB81C400C799C7 /* GoogleService-Info.plist */; };
 		3F78789C2BAB82A200C799C7 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3F78789B2BAB82A200C799C7 /* FirebaseAnalytics */; };
 		3F78789E2BAB82A200C799C7 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 3F78789D2BAB82A200C799C7 /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -95,7 +102,6 @@
 		3F3900DF2BDED0CC00E51AF4 /* BusinessDetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetailsScreen.swift; sourceTree = "<group>"; };
 		3F3900E12BDED34600E51AF4 /* IconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
 		3F3900E32BDED43A00E51AF4 /* BusinessDetailItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetailItemRow.swift; sourceTree = "<group>"; };
-		3F3900E52BDEDBA700E51AF4 /* BookScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookScreen.swift; sourceTree = "<group>"; };
 		3F3979662BA2541E0095E2A1 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		3F3979682BA254DD0095E2A1 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		3F39796B2BA2591D0095E2A1 /* FilledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilledButton.swift; sourceTree = "<group>"; };
@@ -109,6 +115,10 @@
 		3F4432142C06627500434223 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		3F4432162C06628500434223 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		3F4432192C06634E00434223 /* BusinessListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessListViewModel.swift; sourceTree = "<group>"; };
+		3F47FB622C0BCDB7009EA767 /* BookScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BookScreen.swift; path = Reservy/Presentation/Screen/BookScreen.swift; sourceTree = SOURCE_ROOT; };
+		3F47FB642C0BCE1C009EA767 /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BookViewModel.swift; path = Reservy/Presentation/Screen/BookViewModel.swift; sourceTree = SOURCE_ROOT; };
+		3F47FB662C0BCE5D009EA767 /* Hour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hour.swift; sourceTree = "<group>"; };
+		3F47FB682C0BCF20009EA767 /* AvailableHoursRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableHoursRequest.swift; sourceTree = "<group>"; };
 		3F4B1AA22BF6930600556803 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3F4B1AA52BF6936D00556803 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		3F4B1AA72BF6944D00556803 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -117,6 +127,10 @@
 		3F4B1AAF2BF6961500556803 /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
 		3F4B1AB12BF6992300556803 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		3F4B1AB32BF6A0BA00556803 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		3F6FCE2D2C08FAA10057B34E /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		3F6FCE2F2C09021B0057B34E /* Workday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workday.swift; sourceTree = "<group>"; };
+		3F7516842C0CACEA00FA06F0 /* BookingRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingRequest.swift; sourceTree = "<group>"; };
+		3F7516862C0CB16A00FA06F0 /* EmptyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
 		3F7878982BAB81C400C799C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3F91911E2BE2C3980081EEA0 /* EditProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileScreen.swift; sourceTree = "<group>"; };
 		3FC8742D2B8BD6AE00770A17 /* Reservy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reservy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -203,6 +217,8 @@
 				3F4B1AA22BF6930600556803 /* User.swift */,
 				3F4432142C06627500434223 /* Location.swift */,
 				3F4432162C06628500434223 /* Review.swift */,
+				3F6FCE2F2C09021B0057B34E /* Workday.swift */,
+				3F47FB662C0BCE5D009EA767 /* Hour.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -276,13 +292,36 @@
 				3F4B1AB12BF6992300556803 /* ErrorResponse.swift */,
 				3FED20DC2C052427009E2F9F /* LoginRequest.swift */,
 				3FED20DE2C0525ED009E2F9F /* BaseResponse.swift */,
+				3F47FB682C0BCF20009EA767 /* AvailableHoursRequest.swift */,
+				3F7516842C0CACEA00FA06F0 /* BookingRequest.swift */,
+				3F7516862C0CB16A00FA06F0 /* EmptyResponse.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		3F6FCE2C2C08FA900057B34E /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				3F4005C72BE187FB002B7D5F /* ProfileScreen.swift */,
+				3F6FCE2D2C08FAA10057B34E /* ProfileViewModel.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		3F6FCE312C0906420057B34E /* Book */ = {
+			isa = PBXGroup;
+			children = (
+				3F47FB622C0BCDB7009EA767 /* BookScreen.swift */,
+				3F47FB642C0BCE1C009EA767 /* BookViewModel.swift */,
+			);
+			path = Book;
 			sourceTree = "<group>";
 		};
 		3F91911D2BE2C36C0081EEA0 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				3F6FCE312C0906420057B34E /* Book */,
+				3F6FCE2C2C08FA900057B34E /* Profile */,
 				3F4432182C06633100434223 /* BusinessList */,
 				3FED20D92C052352009E2F9F /* Login */,
 				3F4B1AA92BF6955400556803 /* Register */,
@@ -290,8 +329,6 @@
 				3F3900D42BDEC28200E51AF4 /* SelectCityScreen.swift */,
 				3F3900D62BDEC44C00E51AF4 /* HomeScreen.swift */,
 				3F3900DF2BDED0CC00E51AF4 /* BusinessDetailsScreen.swift */,
-				3F3900E52BDEDBA700E51AF4 /* BookScreen.swift */,
-				3F4005C72BE187FB002B7D5F /* ProfileScreen.swift */,
 				3F91911E2BE2C3980081EEA0 /* EditProfileScreen.swift */,
 				3FE118E52BE40188001DF5AB /* ReservationsScreen.swift */,
 			);
@@ -477,11 +514,13 @@
 				3F3900D52BDEC28200E51AF4 /* SelectCityScreen.swift in Sources */,
 				3F4B1AAB2BF6956500556803 /* RegisterViewModel.swift in Sources */,
 				3F4B1AA82BF6944D00556803 /* NetworkError.swift in Sources */,
+				3F47FB672C0BCE5D009EA767 /* Hour.swift in Sources */,
 				3F3900DB2BDECAE600E51AF4 /* BusinessListScreen.swift in Sources */,
 				3F4B1AB02BF6961500556803 /* ApiConstants.swift in Sources */,
 				3F3900E42BDED43A00E51AF4 /* BusinessDetailItemRow.swift in Sources */,
 				3F4432112C0655D900434223 /* UserDefaultsManager.swift in Sources */,
 				3FE118ED2BE40CD8001DF5AB /* AuthManager.swift in Sources */,
+				3F7516872C0CB16A00FA06F0 /* EmptyResponse.swift in Sources */,
 				3F4B1AB22BF6992300556803 /* ErrorResponse.swift in Sources */,
 				3FED20DF2C0525ED009E2F9F /* BaseResponse.swift in Sources */,
 				3FCCC4F92BA65C1A001B52B7 /* RegisterScreen.swift in Sources */,
@@ -492,8 +531,8 @@
 				3F44320C2C0653F700434223 /* NetworkExtensions.swift in Sources */,
 				3FED20DB2C052361009E2F9F /* LoginViewModel.swift in Sources */,
 				3F4B1AAE2BF695C100556803 /* RegisterRequest.swift in Sources */,
+				3F7516852C0CACEA00FA06F0 /* BookingRequest.swift in Sources */,
 				3F3979692BA254DD0095E2A1 /* Assets.swift in Sources */,
-				3F3900E62BDEDBA700E51AF4 /* BookScreen.swift in Sources */,
 				3F39796C2BA2591D0095E2A1 /* FilledButton.swift in Sources */,
 				3F3900E02BDED0CC00E51AF4 /* BusinessDetailsScreen.swift in Sources */,
 				3F4432132C06564B00434223 /* UserDefaultKeys.swift in Sources */,
@@ -501,11 +540,14 @@
 				3F39796E2BA25A100095E2A1 /* PlainButton.swift in Sources */,
 				3F91911F2BE2C3980081EEA0 /* EditProfileScreen.swift in Sources */,
 				3F3900D72BDEC44C00E51AF4 /* HomeScreen.swift in Sources */,
+				3F47FB632C0BCDB7009EA767 /* BookScreen.swift in Sources */,
 				3FC874402B8BDA8A00770A17 /* Colors.swift in Sources */,
 				3FE118E82BE401A0001DF5AB /* ReservationItemView.swift in Sources */,
+				3F6FCE302C09021B0057B34E /* Workday.swift in Sources */,
 				3FC874312B8BD6AE00770A17 /* ReservyApp.swift in Sources */,
 				3F44320F2C06557400434223 /* HttpMethod.swift in Sources */,
 				3F3900E22BDED34600E51AF4 /* IconButton.swift in Sources */,
+				3F47FB692C0BCF20009EA767 /* AvailableHoursRequest.swift in Sources */,
 				3FED20DD2C052427009E2F9F /* LoginRequest.swift in Sources */,
 				3F3979672BA2541E0095E2A1 /* LoginScreen.swift in Sources */,
 				3F4432152C06627500434223 /* Location.swift in Sources */,
@@ -513,6 +555,8 @@
 				3F3900D92BDEC74E00E51AF4 /* BusinessItemView.swift in Sources */,
 				3F4432172C06628500434223 /* Review.swift in Sources */,
 				3F44321A2C06634E00434223 /* BusinessListViewModel.swift in Sources */,
+				3F6FCE2E2C08FAA10057B34E /* ProfileViewModel.swift in Sources */,
+				3F47FB652C0BCE1C009EA767 /* BookViewModel.swift in Sources */,
 				3F4B1AA62BF6936D00556803 /* NetworkManager.swift in Sources */,
 				3FE118EA2BE401F4001DF5AB /* Reservation.swift in Sources */,
 				3F4005C82BE187FB002B7D5F /* ProfileScreen.swift in Sources */,

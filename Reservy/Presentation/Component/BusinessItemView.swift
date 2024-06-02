@@ -24,7 +24,7 @@ struct BusinessItemView: View {
                             .font(.system(size: 18))
                             .fontWeight(.semibold)
                             .padding(.trailing, 4)
-                        Text(business.workingHours)
+                        Text(business.todaysWorkingHours())
                             .font(.system(size: 10))
                             .fontWeight(.light)
                         Spacer()

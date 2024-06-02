@@ -15,11 +15,18 @@ public class UserDefaultsManager: ObservableObject {
     private init() {
         self.userDefaults = UserDefaults.standard
         self.isUserLoggedIn = userDefaults.bool(forKey: UserDefaultKeys.isLoggedIn)
+        self.userId = userDefaults.integer(forKey: UserDefaultKeys.userId)
     }
     
     @Published var isUserLoggedIn: Bool {
         didSet {
             userDefaults.setValue(isUserLoggedIn, forKey: UserDefaultKeys.isLoggedIn)
+        }
+    }
+    
+    @Published var userId: Int {
+        didSet {
+            userDefaults.setValue(userId, forKey: UserDefaultKeys.userId)
         }
     }
 }

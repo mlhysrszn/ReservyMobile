@@ -52,11 +52,11 @@ struct BusinessDetailsScreen: View {
                     )
                     BusinessDetailItemRow(
                         title: "Working Hours",
-                        subTitle: business.workingHours,
+                        subTitle: business.allWorkingHours(),
                         action: {}
                     )
                     NavigationLink("Book Now") {
-                        BookScreen()
+                        BookScreen(business: business)
                     }
                     .frame(maxWidth: .infinity)
                     .padding()

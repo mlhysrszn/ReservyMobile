@@ -36,12 +36,13 @@ class RegisterViewModel: ObservableObject {
         do {
             let requestBody = try? JSONEncoder().encode(registerRequest)
             
-            let _: BaseResponse<User> = try await NetworkManager.shared.post(
+            let userResponse: BaseResponse<User> = try await NetworkManager.shared.post(
                 endpoint: Endpoint.register,
                 body: requestBody,
                 responseType: BaseResponse<User>.self
             )
             userDefaults.isUserLoggedIn = true
+            userDefaults.userId = userResponse.data.id
         } catch let error as NetworkError {
             errorMessage = error.message
         } catch {
