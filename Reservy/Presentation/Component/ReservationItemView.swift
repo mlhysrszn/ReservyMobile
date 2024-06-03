@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ReservationItemView: View {
+    @ObservedObject var viewModel: ReservationsViewModel
     var reservation: Reservation
     
     var body: some View {
@@ -30,7 +31,7 @@ struct ReservationItemView: View {
                                 .fontWeight(.medium)
                         }
                     }
-                    Text(reservation.date)
+                    Text(reservation.time)
                         .font(.system(size: 14))
                         .fontWeight(.medium)
                         .padding(.bottom, 2)
@@ -55,7 +56,11 @@ struct ReservationItemView: View {
                     label: reservation.actionText, 
                     color: reservation.actionColor
                 ) {
-                    print("Action button clicked")
+                    if reservation.isActive {
+                        Task {
+                            await viewModel.cancelReservation(reservationId: reservation.id)
+                        }
+                    }
                 }
                 Spacer()
             }

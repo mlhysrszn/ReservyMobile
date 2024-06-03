@@ -67,7 +67,7 @@ import Foundation
             businessId: business.id,
             userId: userDefaults.userId,
             datetime: datetime,
-            timePeriod: business.timePeriod,
+            timePeriod: business.timePeriod ?? 60,
             note: ""
         )
         

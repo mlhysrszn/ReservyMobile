@@ -51,7 +51,9 @@ class NetworkManager {
             } else {
                 print("Received data (non-UTF8): \(data)")
             }
+            print(error.localizedDescription)
             throw NetworkError.decodingError(message: "Failed to decode response: \(error.localizedDescription)")
+            
         }
     }
     

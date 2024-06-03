@@ -23,27 +23,33 @@ struct BusinessDetailsScreen: View {
                             .fontWeight(.bold)
                             .padding(.trailing, 4)
                         Spacer()
-                        Text(String(business.rating))
-                            .font(.system(size: 12))
-                            .padding(.trailing, 4)
+                        if let rating = business.rating {
+                            Text(String(rating))
+                                .font(.system(size: 12))
+                                .padding(.trailing, 4)
+                        }
                         Image(systemName: "star")
                             .resizable()
                             .frame(width: 16, height: 16)
                     }
                     .padding(.bottom, 8)
                     .padding(.top, -8)
-                    BusinessDetailItemRow(
-                        title: "Phone Number",
-                        subTitle: business.phoneNumber,
-                        iconName: "phone",
-                        action: {}
-                    )
-                    BusinessDetailItemRow(
-                        title: "Mail",
-                        subTitle: business.email,
-                        iconName: "envelope",
-                        action: {}
-                    )
+                    if let phoneNumber = business.phoneNumber {
+                        BusinessDetailItemRow(
+                            title: "Phone Number",
+                            subTitle: phoneNumber,
+                            iconName: "phone",
+                            action: {}
+                        )
+                    }
+                    if let mail = business.email {
+                        BusinessDetailItemRow(
+                            title: "Mail",
+                            subTitle: mail,
+                            iconName: "envelope",
+                            action: {}
+                        )
+                    }
                     BusinessDetailItemRow(
                         title: "Address",
                         subTitle: business.address,

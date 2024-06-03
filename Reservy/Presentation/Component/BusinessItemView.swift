@@ -28,9 +28,11 @@ struct BusinessItemView: View {
                             .font(.system(size: 10))
                             .fontWeight(.light)
                         Spacer()
-                        Text(String(business.rating))
-                            .font(.system(size: 12))
-                            .padding(.trailing, 4)
+                        if let rating = business.rating {
+                            Text(String(rating))
+                                .font(.system(size: 12))
+                                .padding(.trailing, 4)
+                        }
                         Image(systemName: "star")
                             .resizable()
                             .frame(width: 16, height: 16)

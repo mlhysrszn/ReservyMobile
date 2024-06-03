@@ -8,14 +8,13 @@
 import Foundation
 import SwiftUI
 
-struct Reservation {
-    let reservationId: Int
-    let userId: Int
-    let business: Business
-    let date: String
+struct Reservation: Decodable {
+    let id: Int
+    let time: String
+    let timePeriod: String
     let status: ReservationStatus
-    let creationDate: String
-    let notes: String
+    let note: String
+    let business: Business
     
     var actionText: String {
         switch status {
@@ -23,6 +22,8 @@ struct Reservation {
             "Cancel Reservation"
         case .completed:
             "Review Reservation"
+        case .canceled:
+            "Canceled"
         default:
             ""
         }
@@ -38,11 +39,4 @@ struct Reservation {
     var isActive: Bool {
         status == .active
     }
-}
-
-enum ReservationStatus {
-    case created
-    case active
-    case completed
-    case canceled
 }

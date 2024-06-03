@@ -10,18 +10,18 @@ import Foundation
 struct Business: Codable {
     let id: Int
     let name: String
-    let category: String
+    let category: String?
     let address: String
-    let city: String
-    let country: String
-    let phoneNumber: String
-    let email: String
-    let timePeriod: Int
-    let rating: Double
-    let photos: [String]
-    let location: Location
-    let reviews: [Review]
-    let workingHours: [Workday]
+    let city: String?
+    let country: String?
+    let phoneNumber: String?
+    let email: String?
+    let timePeriod: Int?
+    let rating: Double?
+    let photos: [String]?
+    let location: Location?
+    let reviews: [Review]?
+    let workingHours: [Workday]?
 }
 
 extension Business {
@@ -38,7 +38,7 @@ extension Business {
         dateFormatter.dateFormat = "EEEE"
         let today = dateFormatter.string(from: Date())
         
-        if let todayWorkingHour = workingHours.first(where: { $0.dayName == today }) {
+        if let todayWorkingHour = workingHours?.first(where: { $0.dayName == today }) {
             return "Today: \(formatHour(todayWorkingHour.openHour)) - \(formatHour(todayWorkingHour.closeHour))"
         } else {
             return "Closed Today"
@@ -46,7 +46,7 @@ extension Business {
     }
     
     func allWorkingHours() -> String {
-        return workingHours.map { "\($0.dayName): \(formatHour($0.openHour)) - \(formatHour($0.closeHour))" }
-                           .joined(separator: "\n")
+        return workingHours?.map { "\($0.dayName): \(formatHour($0.openHour)) - \(formatHour($0.closeHour))" }
+            .joined(separator: "\n") ?? ""
     }
 }
