@@ -10,15 +10,6 @@ import SwiftUI
 struct ProfileScreen: View {
     @StateObject private var viewModel = ProfileViewModel()
     
-    let sections = [
-        ProfileSection(icon: "pencil", text: "Edit Profile"),
-        ProfileSection(icon: "list.bullet", text: "My Reservations"),
-        ProfileSection(icon: "lock.shield", text: "Privacy Policy"),
-        ProfileSection(icon: "doc.text", text: "Terms and Conditions"),
-        ProfileSection(icon: "star", text: "Rate Us"),
-        ProfileSection(icon: "trash", text: "Delete Account")
-    ]
-    
     var body: some View {
         NavigationStack {
             if viewModel.isLoading {
@@ -45,10 +36,18 @@ struct ProfileScreen: View {
                         NavigationLink(destination: ReservationsScreen()) {
                             ProfileSectionButton(icon: "list.bullet", text: "My Reservations")
                         }
-                        ProfileSectionButton(icon: "lock.shield", text: "Privacy Policy")
-                        ProfileSectionButton(icon: "doc.text", text: "Terms and Conditions")
-                        ProfileSectionButton(icon: "star", text: "Rate Us")
+                        NavigationLink(destination: PrivacyPolicyScreen()) {
+                            ProfileSectionButton(icon: "lock.shield", text: "Privacy Policy")
+                        }
+                        NavigationLink(destination: TermsAndConditionsScreen()) {
+                            ProfileSectionButton(icon: "doc.text", text: "Terms and Conditions")
+                        }
                         ProfileSectionButton(icon: "trash", text: "Delete Account")
+                            .onTapGesture {
+                                Task {
+                                    await viewModel.deleteAccount()
+                                }
+                            }
                     }
                     .scrollContentBackground(.hidden)
                     .scrollDisabled(true)
@@ -67,6 +66,13 @@ struct ProfileScreen: View {
             Task {
                 await viewModel.fetchUserById()
             }
+        }
+        .alert(isPresented: $viewModel.showAlert) {
+            Alert(
+                title: Text(viewModel.isUserDeleted ? "Success" : "Error"),
+                message: Text(viewModel.alertMessage),
+                dismissButton: .default(Text("OK"))
+            )
         }
     }
 }

@@ -80,6 +80,8 @@
 		3F9692D52C0E3B5E00241109 /* ReservationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9692D42C0E3B5E00241109 /* ReservationsViewModel.swift */; };
 		3F9692D82C0E3D8800241109 /* ReservationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9692D72C0E3D8800241109 /* ReservationStatus.swift */; };
 		3F9692DA2C0E440500241109 /* CancelReservationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9692D92C0E440500241109 /* CancelReservationRequest.swift */; };
+		3F9692DF2C0E4A6100241109 /* TermsAndConditionsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9692DE2C0E4A6100241109 /* TermsAndConditionsScreen.swift */; };
+		3F9692E12C0E4C1700241109 /* PrivacyPolicyScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9692E02C0E4C1700241109 /* PrivacyPolicyScreen.swift */; };
 		3FC874312B8BD6AE00770A17 /* ReservyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC874302B8BD6AE00770A17 /* ReservyApp.swift */; };
 		3FC874332B8BD6AE00770A17 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC874322B8BD6AE00770A17 /* ContentView.swift */; };
 		3FC874352B8BD6AF00770A17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC874342B8BD6AF00770A17 /* Assets.xcassets */; };
@@ -141,6 +143,8 @@
 		3F9692D42C0E3B5E00241109 /* ReservationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationsViewModel.swift; sourceTree = "<group>"; };
 		3F9692D72C0E3D8800241109 /* ReservationStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationStatus.swift; sourceTree = "<group>"; };
 		3F9692D92C0E440500241109 /* CancelReservationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelReservationRequest.swift; sourceTree = "<group>"; };
+		3F9692DE2C0E4A6100241109 /* TermsAndConditionsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsScreen.swift; sourceTree = "<group>"; };
+		3F9692E02C0E4C1700241109 /* PrivacyPolicyScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyScreen.swift; sourceTree = "<group>"; };
 		3FC8742D2B8BD6AE00770A17 /* Reservy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reservy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC874302B8BD6AE00770A17 /* ReservyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservyApp.swift; sourceTree = "<group>"; };
 		3FC874322B8BD6AE00770A17 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -315,6 +319,8 @@
 			children = (
 				3F4005C72BE187FB002B7D5F /* ProfileScreen.swift */,
 				3F6FCE2D2C08FAA10057B34E /* ProfileViewModel.swift */,
+				3F9692DE2C0E4A6100241109 /* TermsAndConditionsScreen.swift */,
+				3F9692E02C0E4C1700241109 /* PrivacyPolicyScreen.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -548,10 +554,12 @@
 				3F3900DB2BDECAE600E51AF4 /* BusinessListScreen.swift in Sources */,
 				3F4B1AB02BF6961500556803 /* ApiConstants.swift in Sources */,
 				3F3900E42BDED43A00E51AF4 /* BusinessDetailItemRow.swift in Sources */,
+				3F9692DF2C0E4A6100241109 /* TermsAndConditionsScreen.swift in Sources */,
 				3F4432112C0655D900434223 /* UserDefaultsManager.swift in Sources */,
 				3FE118ED2BE40CD8001DF5AB /* AuthManager.swift in Sources */,
 				3F7516872C0CB16A00FA06F0 /* EmptyResponse.swift in Sources */,
 				3F4B1AB22BF6992300556803 /* ErrorResponse.swift in Sources */,
+				3F9692E12C0E4C1700241109 /* PrivacyPolicyScreen.swift in Sources */,
 				3FED20DF2C0525ED009E2F9F /* BaseResponse.swift in Sources */,
 				3FCCC4F92BA65C1A001B52B7 /* RegisterScreen.swift in Sources */,
 				3F4B1AA32BF6930600556803 /* User.swift in Sources */,

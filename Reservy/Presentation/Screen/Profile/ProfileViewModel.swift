@@ -14,6 +14,9 @@ import Foundation
     @Published var user: User?
     @Published var isLoading: Bool = true
     @Published var errorMessage: String = ""
+    @Published var showAlert: Bool = false
+    @Published var alertMessage: String = ""
+    @Published var isUserDeleted: Bool = false
     
     func fetchUserById() async {
         isLoading = true
@@ -36,6 +39,30 @@ import Foundation
             errorMessage = error.localizedDescription
         }
         isLoading = false
+    }    
+    
+    func deleteAccount() async {
+        let userRequest = UserRequest(id: userDefaults.userId)
+        
+        do {
+            let requestBody = try? JSONEncoder().encode(userRequest)
+
+            let response: EmptyResponse = try await networkManager.post(
+                endpoint: Endpoint.deleteAccount,
+                body: requestBody,
+                responseType: EmptyResponse.self
+            )
+            alertMessage = response.message
+            if response.status == 200 {
+                isUserDeleted = true
+                logout()
+            }
+        } catch let error as NetworkError {
+            alertMessage = error.message
+        } catch {
+            alertMessage = error.localizedDescription
+        }
+        showAlert = true
     }
     
     func logout() {

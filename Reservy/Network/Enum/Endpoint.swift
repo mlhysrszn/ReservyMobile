@@ -16,6 +16,7 @@ enum Endpoint {
     case getUserById
     case getReservations
     case cancelReservation
+    case deleteAccount
 }
 
 protocol EndpointProtocol {
@@ -60,7 +61,9 @@ extension Endpoint: EndpointProtocol {
         case .getReservations:
             return "get_reservations"
         case .cancelReservation:
-            return "cancel_reservation"
+            return "cancel_reservation"        
+        case .deleteAccount:
+            return "delete_account"
         }
     }
     
@@ -81,6 +84,8 @@ extension Endpoint: EndpointProtocol {
         case .getReservations:
             return .post
         case .cancelReservation:
+            return .post        
+        case .deleteAccount:
             return .post
         }
     }
