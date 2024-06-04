@@ -21,16 +21,30 @@ struct BusinessListScreen: View {
                     .foregroundColor(.red)
                     .padding()
             } else {
-                ScrollView {
-                    LazyVStack {
-                        ForEach(viewModel.businesses, id: \.id) { business in
-                            NavigationLink(
-                                destination: BusinessDetailsScreen(business: business)) {
-                                BusinessItemView(business: business)
-                            }.buttonStyle(PlainButtonStyle())
+                VStack {
+                    Picker("Select City", selection: $viewModel.selectedCity) {
+                        Text("All Cities").tag(String?.none)
+                        ForEach(viewModel.cities, id: \.self) { city in
+                            Text(city).tag(String?(city))
                         }
                     }
-                    
+                    .pickerStyle(MenuPickerStyle())
+                    .padding(.horizontal)
+                    TextField("Search...", text: $viewModel.searchQuery)
+                        .padding()
+                        .background(Color(.systemGray6))
+                        .cornerRadius(8)
+                        .padding(.horizontal)
+                    ScrollView {
+                        LazyVStack {
+                            ForEach(viewModel.filteredBusinesses, id: \.id) { business in
+                                NavigationLink(
+                                    destination: BusinessDetailsScreen(business: business)) {
+                                    BusinessItemView(business: business)
+                                }.buttonStyle(PlainButtonStyle())
+                            }
+                        }
+                    }
                 }
             }
         }
