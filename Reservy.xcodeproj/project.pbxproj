@@ -96,6 +96,9 @@
 		3FED20DB2C052361009E2F9F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FED20DA2C052361009E2F9F /* LoginViewModel.swift */; };
 		3FED20DD2C052427009E2F9F /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FED20DC2C052427009E2F9F /* LoginRequest.swift */; };
 		3FED20DF2C0525ED009E2F9F /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FED20DE2C0525ED009E2F9F /* BaseResponse.swift */; };
+		3FF9C6502C14DC3200498885 /* TypeSelectionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF9C64F2C14DC3200498885 /* TypeSelectionScreen.swift */; };
+		3FF9C6522C14DD4E00498885 /* ReservationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF9C6512C14DD4E00498885 /* ReservationType.swift */; };
+		3FF9C6542C14DD6400498885 /* TypeSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF9C6532C14DD6400498885 /* TypeSelectionViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -161,6 +164,9 @@
 		3FED20DA2C052361009E2F9F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		3FED20DC2C052427009E2F9F /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		3FED20DE2C0525ED009E2F9F /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		3FF9C64F2C14DC3200498885 /* TypeSelectionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeSelectionScreen.swift; sourceTree = "<group>"; };
+		3FF9C6512C14DD4E00498885 /* ReservationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationType.swift; sourceTree = "<group>"; };
+		3FF9C6532C14DD6400498885 /* TypeSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeSelectionViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +238,7 @@
 				3F4432162C06628500434223 /* Review.swift */,
 				3F6FCE2F2C09021B0057B34E /* Workday.swift */,
 				3F47FB662C0BCE5D009EA767 /* Hour.swift */,
+				3FF9C6512C14DD4E00498885 /* ReservationType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -337,6 +344,7 @@
 		3F91911D2BE2C36C0081EEA0 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				3FF9C64E2C14DC2000498885 /* TypeSelection */,
 				3F9692D32C0E37F500241109 /* Reservations */,
 				3F7B511C2C0D0C8200BF610D /* Book */,
 				3F6FCE2C2C08FA900057B34E /* Profile */,
@@ -437,6 +445,15 @@
 				3FED20DA2C052361009E2F9F /* LoginViewModel.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		3FF9C64E2C14DC2000498885 /* TypeSelection */ = {
+			isa = PBXGroup;
+			children = (
+				3FF9C64F2C14DC3200498885 /* TypeSelectionScreen.swift */,
+				3FF9C6532C14DD6400498885 /* TypeSelectionViewModel.swift */,
+			);
+			path = TypeSelection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -549,12 +566,14 @@
 				3F4B1AAB2BF6956500556803 /* RegisterViewModel.swift in Sources */,
 				3F9692DA2C0E440500241109 /* CancelReservationRequest.swift in Sources */,
 				3F4B1AA82BF6944D00556803 /* NetworkError.swift in Sources */,
+				3FF9C6502C14DC3200498885 /* TypeSelectionScreen.swift in Sources */,
 				3F47FB672C0BCE5D009EA767 /* Hour.swift in Sources */,
 				3F9692D52C0E3B5E00241109 /* ReservationsViewModel.swift in Sources */,
 				3F3900DB2BDECAE600E51AF4 /* BusinessListScreen.swift in Sources */,
 				3F4B1AB02BF6961500556803 /* ApiConstants.swift in Sources */,
 				3F3900E42BDED43A00E51AF4 /* BusinessDetailItemRow.swift in Sources */,
 				3F9692DF2C0E4A6100241109 /* TermsAndConditionsScreen.swift in Sources */,
+				3FF9C6542C14DD6400498885 /* TypeSelectionViewModel.swift in Sources */,
 				3F4432112C0655D900434223 /* UserDefaultsManager.swift in Sources */,
 				3FE118ED2BE40CD8001DF5AB /* AuthManager.swift in Sources */,
 				3F7516872C0CB16A00FA06F0 /* EmptyResponse.swift in Sources */,
@@ -565,6 +584,7 @@
 				3F4B1AA32BF6930600556803 /* User.swift in Sources */,
 				3F3900DE2BDECD3900E51AF4 /* Business.swift in Sources */,
 				3FC874442B8BDD2000770A17 /* SplashScreen.swift in Sources */,
+				3FF9C6522C14DD4E00498885 /* ReservationType.swift in Sources */,
 				3FC874332B8BD6AE00770A17 /* ContentView.swift in Sources */,
 				3F44320C2C0653F700434223 /* NetworkExtensions.swift in Sources */,
 				3FED20DB2C052361009E2F9F /* LoginViewModel.swift in Sources */,

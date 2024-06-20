@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct BookScreen: View {
-    var business: Business
+    var businessId: Int
+    var typeId: Int
+    var timePeriod: Int
     @StateObject private var viewModel = BookViewModel()
     @Environment(\.presentationMode) var presentationMode
     
@@ -25,7 +27,7 @@ struct BookScreen: View {
                 .onChange(of: viewModel.selectedDate) { oldValue, newValue in
                     if newValue != oldValue {
                         Task {
-                            await viewModel.fetchAvailablePeriods(businessID: business.id)
+                            await viewModel.fetchAvailablePeriods(businessID: businessId, typeId: typeId)
                         }
                     }
                 }
@@ -60,7 +62,7 @@ struct BookScreen: View {
                 if !viewModel.availableHours.isEmpty {
                     FilledButton(label: "Book Now", width: .infinity, isLoading: viewModel.isLoading) {
                         Task {
-                            await viewModel.book(business: business)
+                            await viewModel.book(businessId: businessId, timePeriod: timePeriod)
                         }
                     }
                     .padding(16)
@@ -83,7 +85,7 @@ struct BookScreen: View {
         }
         .onAppear {
             Task {
-                await viewModel.fetchAvailablePeriods(businessID: business.id)
+                await viewModel.fetchAvailablePeriods(businessID: businessId, typeId: typeId)
             }
         }
     }

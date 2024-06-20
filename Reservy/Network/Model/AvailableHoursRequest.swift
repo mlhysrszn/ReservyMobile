@@ -9,5 +9,6 @@ import Foundation
 
 struct AvailableHoursRequest: Encodable {
     let businessId: Int
+    let typeId: Int
     let date: String
 }

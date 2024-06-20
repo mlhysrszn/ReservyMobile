@@ -17,6 +17,7 @@ enum Endpoint {
     case getReservations
     case cancelReservation
     case deleteAccount
+    case reservationTypes
 }
 
 protocol EndpointProtocol {
@@ -28,8 +29,8 @@ protocol EndpointProtocol {
 
 extension Endpoint: EndpointProtocol {
     
-    var urlString: URL? {
-        URL(string: "\(baseUrl)/\(path)")
+    var urlString: String {
+        return "\(baseUrl)/\(path)"
     }
     
     var baseUrl: String {
@@ -64,6 +65,8 @@ extension Endpoint: EndpointProtocol {
             return "cancel_reservation"        
         case .deleteAccount:
             return "delete_account"
+        case .reservationTypes:
+            return "get_reservation_types"
         }
     }
     
@@ -86,7 +89,9 @@ extension Endpoint: EndpointProtocol {
         case .cancelReservation:
             return .post        
         case .deleteAccount:
-            return .post
+            return .post 
+        case .reservationTypes:
+            return .get
         }
     }
 }

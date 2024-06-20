@@ -62,7 +62,7 @@ struct BusinessDetailsScreen: View {
                         action: {}
                     )
                     NavigationLink("Book Now") {
-                        BookScreen(business: business)
+                        TypeSelectionScreen(businessId: business.id)
                     }
                     .frame(maxWidth: .infinity)
                     .padding()

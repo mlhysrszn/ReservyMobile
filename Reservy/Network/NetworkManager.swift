@@ -13,10 +13,18 @@ class NetworkManager {
     
     private init() {}
     
-    func request<T: Decodable>(endpoint: Endpoint, body: Data? = nil, responseType: T.Type) async throws -> T {
-        guard let url = endpoint.urlString else {
-              throw NetworkError.invalidURL()
-          }
+    func request<T: Decodable>(endpoint: Endpoint, body: Data? = nil, queryParameters: [String: String]? = nil, responseType: T.Type) async throws -> T {
+        guard var urlComponents = URLComponents(string: endpoint.urlString) else {
+            throw NetworkError.invalidURL()
+        }
+
+        if let queryParameters = queryParameters {
+            urlComponents.queryItems = queryParameters.map { URLQueryItem(name: $0.key, value: $0.value) }
+        }
+        
+        guard let url = urlComponents.url else {
+            throw NetworkError.invalidURL()
+        }
         
         var request = URLRequest(url: url)
         request.httpMethod = endpoint.httpMethod.rawValue
@@ -57,8 +65,8 @@ class NetworkManager {
         }
     }
     
-    func get<T: Decodable>(endpoint: Endpoint, responseType: T.Type) async throws -> T {
-        return try await request(endpoint: endpoint, responseType: responseType)
+    func get<T: Decodable>(endpoint: Endpoint, queryParameters: [String: String]? = nil, responseType: T.Type) async throws -> T {
+        return try await request(endpoint: endpoint, queryParameters: queryParameters, responseType: responseType)
     }
     
     func post<T: Decodable>(endpoint: Endpoint, body: Data?, responseType: T.Type) async throws -> T {

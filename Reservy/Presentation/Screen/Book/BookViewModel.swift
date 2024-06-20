@@ -21,7 +21,7 @@ import Foundation
     @Published var alertMessage: String = ""
     @Published var bookingSuccessful: Bool = false
 
-    func fetchAvailablePeriods(businessID: Int) async {
+    func fetchAvailablePeriods(businessID: Int, typeId: Int) async {
         isHoursLoading = true
         selectedHour = nil
         errorMessage = ""
@@ -31,6 +31,7 @@ import Foundation
         
         let availableHoursRequest = AvailableHoursRequest(
             businessId: businessID,
+            typeId: typeId,
             date: dateString
         )
         
@@ -54,7 +55,7 @@ import Foundation
         isHoursLoading = false
     }
     
-    func book(business: Business) async {
+    func book(businessId: Int, timePeriod: Int) async {
         isLoading = true
         guard let selectedHour = selectedHour else { return }
         let dateFormatter = DateFormatter()
@@ -64,10 +65,10 @@ import Foundation
         let datetime = "\(dateString) \(selectedHour.time)"
         
         let bookingRequest = BookingRequest(
-            businessId: business.id,
+            businessId: businessId,
             userId: userDefaults.userId,
             datetime: datetime,
-            timePeriod: business.timePeriod ?? 60,
+            timePeriod: timePeriod,
             note: ""
         )
         
